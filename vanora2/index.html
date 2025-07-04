@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profecia - Bienestar Capilar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --main-bg: #f9f0ef;
+      --primary: #c36d96;
+      --secondary: #ffedf5;
+      --text: #4a154b;
+    }
+
+    body {
+      background-color: var(--main-bg);
+    }
+
+    .btn-custom {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #a35779;
+    }
+  </style>
+
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start p-4 text-center text-base text-text font-sans">
+  <!-- Logo / Nombre -->
+  <img src="vanoraLogo.png" alt="Vanora Logo" class="w-24 h-24 mt-4 mb-2 rounded-full object-cover">
+  <h1 class="text-3xl font-bold text-text mt-4">Vanora</h1>
+  <p class="text-text text-sm mb-6">Conecta con la esencia de tu cabello.
+
+</p>
+
+  <!-- Botones estilo Linktree -->
+  <div class="flex flex-col w-full max-w-sm gap-4">
+    <button id="whatsappBtn" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Asesoría en Whatsapp</button>
+    <button id="mercadoPagoBtn" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Compra directa en la web</button>
+    <!--<a href="https://tuweb.com/crecimiento" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Todo de crecimiento & anticaída</a>
+    <a href="https://tuweb.com/marca" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">¿Esta marca es MOI HAIRCARE?</a>-->
+    <a href="manualProducto.pdf" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">📄 Ver manual del producto</a>
+  </div>
+
+  <!-- Producto Estrella con fondo suavizado -->
+  <section class="mt-10 w-full flex justify-center">
+    <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg bg-center bg-cover relative" style="background-image: url('VanImg.png');">
+      <!-- Capa rosada semitransparente -->
+      <div class="absolute inset-0" style="background-color: rgba(255, 230, 236, 0.75);"></div>
+
+      <!-- Contenido sobre el fondo -->
+      <div class="relative p-6 text-text">
+        <h2 class="text-2xl font-extrabold mb-4 text-center drop-shadow-md">Producto Estrella</h2>
+        <ul class="space-y-2 text-base font-medium text-left drop-shadow-sm">
+          <li>🔥 Protección térmica</li>
+          <li>🌬️ Protección contra agentes externos</li>
+          <li>💧 Sin residuos grasos</li>
+          <li>✨ Disminuye el frizz</li>
+          <li>🧼 Facilita el planchado y el cepillado</li>
+          <li>💎 Cabello brillante, suave y manejable</li>
+          <li>🌈 Apto para todo tipo de cabello</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detalles del producto -->
+  <div
+  data-aos="fade-up"
+  class="w-full max-w-md bg-cover bg-center rounded-xl shadow-lg p-6 my-6 text-left"
+  style="background-image: linear-gradient(rgba(255, 230, 236, 0.75), rgba(255, 230, 236, 0.75)), url('VanImg2.png');"
+>
+  <h2 class="text-xl font-bold mb-4 text-text flex justify-center">Detalles del Producto</h2>
+  <p class="text-text mb-4">
+    Estos activos combinados ofrecen hidratación, reparación, protección térmica y un acabado suave y brillante.
+  </p>
+  <ul class="text-text list-disc list-inside space-y-2">
+    <li><strong>🌰 Aceite de Argán:</strong> Nutre, repara y da brillo al cabello dañado, protegiendo las puntas abiertas.</li>
+    <li><strong>🌿 Aceite de Jojoba:</strong> Hidrata sin dejar residuos, mejora la elasticidad y suaviza el cabello.</li>
+    <li><strong>🌸 Aceite de Almendra Dulce:</strong> Fortalece y repara las puntas abiertas, mejorando la textura y vitalidad.</li>
+    <li><strong>🛡️ Vitamina E:</strong> Protege contra el daño ambiental y preserva la salud del cabello.</li>
+    <li><strong>💧 Modo de uso:</strong> Aplicar de 4 a 5 gotas sobre la palma, frotar y distribuir de medios a puntas con masajes descendentes. No enjuagar.</li>
+  </ul>
+</div>
+
+ 
+
+
+  <!-- Popup de registro (simplificado) -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl p-6 max-w-sm w-full shadow-lg relative">
+      <button onclick="closePopup()" class="absolute top-2 right-4 text-lg">✖</button>
+      <h2 class="text-xl font-bold mb-2 text-text">¡NO TE LO PIERDAS!</h2>
+      <p class="text-text text-sm mb-4">10% OFF en tu primera compra al registrarte</p>
+      <form>
+        <input type="text" placeholder="Nombre" class="w-full mb-2 px-4 py-2 border rounded" required>
+        <input type="email" placeholder="Correo electrónico" class="w-full mb-2 px-4 py-2 border rounded" required>
+        <input type="text" placeholder="Cumpleaños (opcional)" class="w-full mb-4 px-4 py-2 border rounded">
+        <button type="submit" class="btn-custom w-full py-2 rounded">Obtener descuento</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar popup después de unos segundos (una vez por sesión)
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(() => {
+          document.getElementById('popup').classList.remove('hidden');
+          sessionStorage.setItem('popupShown', 'true');
+        }, 2000);
+      }
+
+      // Botón WhatsApp
+      const boton = document.getElementById("whatsappBtn");
+      if (boton) {
+        boton.addEventListener("click", () => {
+          const mensaje = "Hola, quiero hacer un pedido del Producto Estrella.";
+          const telefono = "573169478779";
+          window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
+        });
+      } else {
+        console.error("No se encontró el botón de WhatsApp.");
+      }
+
+      // Botón MercadoPago
+      const mpBtn = document.getElementById("mercadoPagoBtn");
+      if (mpBtn) {
+        mpBtn.addEventListener("click", () => {
+          window.open("https://mpago.li/1R3V6ND", "_blank");
+        });
+      }
+    });
+
+    function closePopup() {
+      document.getElementById('popup').classList.add('hidden');
+    }
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
