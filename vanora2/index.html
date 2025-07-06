@@ -17,14 +17,22 @@
       background-color: var(--main-bg);
     }
 
-    .btn-custom {
-      background-color: var(--primary);
-      color: white;
-    }
+      .btn-custom {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 9999px; /* Esto equivale a rounded-full */
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    box-shadow: 6px 6px 0px #4a154b; /* sombra similar a la imagen */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
 
-    .btn-custom:hover {
-      background-color: #a35779;
-    }
+  .btn-custom:hover {
+    background-color: #a35779;
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 0px #4a154b;
+  }
   </style>
 
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -40,11 +48,11 @@
 
   <!-- Botones estilo Linktree -->
   <div class="flex flex-col w-full max-w-sm gap-4">
-    <button id="whatsappBtn" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Asesoría en Whatsapp</button>
-    <button id="mercadoPagoBtn" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Compra directa en la web</button>
+    <button id="whatsappBtn" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">📲 Asesoría en Whatsapp</button>
+    <button id="mercadoPagoBtn" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">🛍️ Compra directa en la web</button>
     <!--<a href="https://tuweb.com/crecimiento" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Todo de crecimiento & anticaída</a>
     <a href="https://tuweb.com/marca" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">¿Esta marca es MOI HAIRCARE?</a>-->
-    <a href="manualProducto.pdf" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">📄 Ver manual del producto</a>
+    <a href="manualProducto.pdf" class="btn-custom rounded-full py-3 px-6 text-lg shadow-md">Sobre nosotros 💗</a>
   </div>
 
   <!-- Producto Estrella con fondo suavizado -->
@@ -69,6 +77,19 @@
     </div>
   </section>
 
+  <div class="flex justify-center items-center mt-6">
+  <a href="https://www.tiktok.com/@vanoracosmetics?_t=ZS-8xkxiesN5r0&_r=1" 
+   target="_blank" 
+   aria-label="TikTok"
+   class="transition-transform transform hover:scale-110 hover:opacity-80">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#6b1e58" viewBox="0 0 24 24" width="40" height="40">
+    <path d="M16.5 1a5.5 5.5 0 0 0 5.5 5.5v3.25a8.75 8.75 0 0 1-6.58-3.22v7.39a6.17 6.17 0 1 1-6.17-6.17c.56 0 1.1.08 1.61.23v3.32a2.84 2.84 0 1 0 2.84 2.84V1h2.8Z"/>
+  </svg>
+</a>
+
+</div>
+
+
   <!-- Detalles del producto -->
   <div
   data-aos="fade-up"
@@ -88,8 +109,6 @@
   </ul>
 </div>
 
- 
-
 
   <!-- Popup de registro (simplificado) -->
   <div id="popup" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden">
@@ -104,6 +123,8 @@
         <button type="submit" class="btn-custom w-full py-2 rounded">Obtener descuento</button>
       </form>
     </div>
+
+    
   </div>
 
   <script>
