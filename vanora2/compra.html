@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Compra Vanora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Heading de la marca -->
+<section class="text-center mt-8">
+  <h1 class="text-3xl font-extrabold text-pink-600 mb-2 tracking-wide">VANORA COSMETICS</h1>
+  <p class="text-lg text-gray-700 max-w-md mx-auto">
+    Belleza consciente para tu cabello. Fórmulas naturales, resultados visibles.
+  </p>
+</section>
+
+
+  <!-- Carrusel Swiper -->
+  <div class="swiper mySwiper w-full max-w-md mt-6 rounded-xl overflow-hidden shadow-lg">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="VanImg0.png" alt="Producto 1" class="w-full object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="VanImg1.png" alt="Producto 2" class="w-full object-cover">
+      </div>
+      <div class="swiper-slide">
+        <img src="VanImg2.png" alt="Producto 3" class="w-full object-cover">
+      </div>
+    </div>
+
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+    <section class="max-w-md mx-auto mt-6 px-4">
+    <h1 class="text-2xl font-bold text-center mb-2">ACEITE REPARADOR VANORA</h1>
+    <p class="text-lg text-center mb-4">Hidratación, reparación y brillo para todo tipo de cabello.</p>
+
+    <p class="text-xl font-semibold text-center mb-6">💰 $38.000 COP</p>
+
+    <div class="flex flex-col items-center gap-3">
+
+   
+
+      <a href="https://mpago.li/1R3V6ND" target="_blank"
+         class="mt-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition">
+        💳 Pagar ahora con MercadoPago
+      </a>
+    </div>
+  </section>
+    <section class="mt-10 w-full flex justify-center px-4">
+    <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg bg-center bg-cover relative" style="background-image: url('VanImg.png');">
+      <div class="absolute inset-0" style="background-color: rgba(255, 230, 236, 0.75);"></div>
+      <div class="relative p-6 text-gray-800">
+        <h2 class="text-xl font-extrabold mb-4 text-center drop-shadow-md">Beneficios</h2>
+        <ul class="space-y-2 text-base font-medium text-left drop-shadow-sm">
+          <li>🔥 Protección térmica</li>
+          <li>🌬️ Contra agentes externos</li>
+          <li>💧 Sin residuos grasos</li>
+          <li>✨ Disminuye el frizz</li>
+          <li>🧼 Facilita el planchado y cepillado</li>
+          <li>💎 Brillante, suave y manejable</li>
+          <li>🌈 Apto para todo tipo de cabello</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<!-- Detalles del producto con imagen de fondo -->
+<section class="w-full flex justify-center px-4 mt-8">
+  <div
+    class="w-full max-w-md bg-cover bg-center rounded-xl shadow-lg p-6 relative"
+    style="background-image: linear-gradient(rgba(255, 230, 236, 0.75), rgba(255, 230, 236, 0.75)), url('VanImg2.png');"
+  >
+    <h2 class="text-xl font-bold mb-4 text-gray-800 text-center drop-shadow-md">Detalles del Producto</h2>
+
+    <p class="text-sm mb-4 text-gray-800 text-justify">
+      Estos activos combinados ofrecen hidratación, reparación, protección térmica y un acabado suave y brillante.
+    </p>
+
+    <ul class="list-disc list-inside space-y-2 text-sm text-gray-800">
+      <li><strong>🌰 Aceite de Argán:</strong> Nutre, repara y da brillo al cabello dañado, protegiendo las puntas abiertas.</li>
+      <li><strong>🌿 Aceite de Jojoba:</strong> Hidrata sin dejar residuos, mejora la elasticidad y suaviza el cabello.</li>
+      <li><strong>🌸 Aceite de Almendra Dulce:</strong> Fortalece y repara las puntas abiertas, mejorando la textura y vitalidad.</li>
+      <li><strong>🛡️ Vitamina E:</strong> Protege contra el daño ambiental y preserva la salud del cabello.</li>
+      <li><strong>💧 Modo de uso:</strong> Aplicar de 4 a 5 gotas sobre la palma, frotar y distribuir de medios a puntas con masajes descendentes. No enjuagar.</li>
+    </ul>
+  </div>
+</section>
+
+
+
+</body>
+
+<!-- Inicialización -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+</html>
